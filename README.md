@@ -1,3 +1,13 @@
+## jkilpatr's fabric fork for Centos
+
+To use this go over to the fabric-baseimage repo on my github. Follow the instructions there and keep the docker image hash you get when you are done. Then edit the dockerfiles in images/ with the exception of the javaenv to pull from your centos based fabric baseimage. 
+
+After that run `make peer-docker`, then take the resulting docker image hash and run `docker run <your image hash>` you should see a fabric peer spin up. 
+
+TODO:
+* tests
+* somthing upstreamable (working with ghaskins on that)
+
 
 **Note:** This is a **read-only mirror** of the formal [Gerrit](https://gerrit.hyperledger.org/r/#/admin/projects/fabric) repository,
 where active development is ongoing. Issue tracking is handled in [Jira](https://jira.hyperledger.org/secure/RapidBoard.jspa?projectKey=FAB&rapidView=5&view=planning)
