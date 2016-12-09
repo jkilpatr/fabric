@@ -1,4 +1,6 @@
-FROM hyperledger/fabric-runtime:_TAG_
+#This needs to match your custom fabric baseimage if you are changing that
+FROM 38fc03c7e7d5 
+ENV LD_LIBRARY_PATH /usr/local/lib:$LD_LIBRARY_PATH
 ENV PEER_CFG_PATH /etc/hyperledger/fabric
 RUN mkdir -p /var/hyperledger/db $PEER_CFG_PATH/msp
 COPY payload/peer /usr/local/bin

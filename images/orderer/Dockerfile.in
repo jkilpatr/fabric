@@ -1,4 +1,5 @@
-FROM hyperledger/fabric-runtime:_TAG_
+#This needs to match your custom fabric-baseimage if you are compiling that yourself
+FROM 38fc03c7e7d5
 ENV ORDERER_CFG_PATH /etc/hyperledger/fabric
 RUN mkdir -p /var/hyperledger/db /etc/hyperledger/fabric
 COPY payload/orderer /usr/local/bin
