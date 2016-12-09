@@ -1,3 +1,4 @@
-FROM 38fc03c7e7d5
+# update this with your base image id
+FROM bff0b31446af
 COPY payload/chaintool payload/protoc-gen-go /usr/local/bin/
 ADD payload/goshim.tar.bz2 $GOPATH/src/
